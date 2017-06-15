@@ -1,0 +1,10 @@
+System calls
+Read - lee del teclado y lo guarda en un buffer. 
+Write  - escribe en salida estándar.
+ 
+Userland
+Tiene disponibles las funciones getChar, putChar, puts, scanf, printf.
+En terminal el usuario puede escribir los comandos echo, help (para ver un menú).
+ 
+Kernel
+Se setean las interrupciones y el PIC en interruptions.c, con funciones que son llamadas desde kernel.c. Se tiene un sysCallDispatcher que llama a las funciones correspondientes a cada system call. El teclado y el video tienen sus respectivos drivers.
